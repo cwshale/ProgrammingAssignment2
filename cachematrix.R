@@ -1,13 +1,13 @@
-## Put comments here that give an overall description of what your
-## functions do
+## 'makeCacheMatrix' and 'cacheSolve' create and interact with two cached variables that are intended to hold an
+## input matrix and its inverse.
 
-## Write a short comment describing this function
+## 'makeCacheMatrix' creates a list of functions to interact with a matrix input and its inverse.
 
 makeCacheMatrix <- function(x = matrix()) {
         inv <- NULL
         
         set <- function(z){        # Function to change value of matrix after initially stored into a variable
-                x <<- z            # Change matrix value to argument of 'set' 
+                x <<- z            # Change matrix value to argument of 'set' and cache it 
                 inv <<- NULL       # Reset value of inverse
         }
         
